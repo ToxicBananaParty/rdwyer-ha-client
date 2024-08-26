@@ -1,1 +1,2 @@
+echo "Hello, Pre-Commit!"
 npx lint-staged
