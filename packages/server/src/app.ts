@@ -6,7 +6,7 @@ async function init() {
 
 function sleep(ms: number) {
   const x = 'Hello';
-  let y = 'Hello!';
+  let y = 'Hello';
 
   y += x;
   console.log(y);
