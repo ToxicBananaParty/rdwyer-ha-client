@@ -9,16 +9,26 @@
 			"path": "packages/web-client/src"
 		},
 		{
-			"path": "packages/os"
+			"path": "packages/os",
+			"name": "csharp-cli"
+		},
+		{
+			"path": ".",
+			"name": "root-configs"
 		}
 	],
 	"settings": {
 		"files.exclude": {
 			"**/node_modules": true,
-			"**/os.sln": true,
+			"**/os.sln": false,
 			"**/bin": true,
 			"**/obj": true,
-			"**/*.csproj": true
-		}
+			"**/*.csproj": true,
+			"package-lock.json": true,
+			"**/.eslintcache": true,
+			"scripts": true,
+			"packages": true,
+		},
+		"files.eol": "\n"
 	}
 }
