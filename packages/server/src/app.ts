@@ -1,19 +1,26 @@
-async function init() {
-  console.log('Hello, World!');
-  await sleep(1000);
-  console.log('Hello, World After Waiting!');
-}
+import dotenv from 'dotenv';
+import express from 'express';
+//import path from 'path';
+import cors from 'cors';
 
-function sleep(ms: number) {
-  const x = 'Hello';
-  let y = 'Hello';
+dotenv.config();
 
-  y += x;
-  console.log(y);
+const app = express();
+const port = process.env.PORT || 6969;
 
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
+app.use(express.json());
+app.use(express.urlencoded());
 
-init();
+app.use(cors());
+
+app.get('/', (req, res) => {
+    res.send('Hello, world!');
+});
+
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+
+    setInterval(() => {
+        console.log('Still listening!');
+    }, 2000);
+});
