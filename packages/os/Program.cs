@@ -1,6 +1,6 @@
 ﻿internal class Program
 {
     public static void Main(string[] args) {
-        Console.WriteLine("Fuck me!");
+        Console.WriteLine("Hello World!");
     }
 }
