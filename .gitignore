@@ -6,6 +6,8 @@
 
 **/dist
 **/build
+**/os/obj
+**/os/bin
 
 # Logs
 logs
