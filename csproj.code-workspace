@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "packages/os"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/node_modules": true
+		}
+	}
+}

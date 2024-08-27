@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"name": "express-server",
+			"path": "packages/server/src"
+		},
+		{
+			"name": "dashboard-frontend",
+			"path": "packages/web-client/src"
+		},
+		{
+			"path": "packages/os"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/node_modules": true,
+			"**/os.sln": true,
+			"**/bin": true,
+			"**/obj": true,
+			"**/*.csproj": true
+		}
+	}
+}
