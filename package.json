@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "prepare": "husky",
-    "start": "npm start --prefix ./packages/web-client & npm start --prefix ./packages/server"
+    "build": "tsc --project ./packages/server/tsconfig.json && npm run build --prefix ./packages/web-client",
+    "start": "npm start --prefix ./packages/server & npm start --prefix ./packages/web-client"
   },
   "repository": {
     "type": "git",
