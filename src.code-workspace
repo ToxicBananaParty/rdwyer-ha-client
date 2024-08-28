@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"name": "csharp-cli",
+			"path": "packages/os"
+		},
+		{
 			"name": "express-server",
 			"path": "packages/server/src"
 		},
@@ -9,12 +13,8 @@
 			"path": "packages/web-client/src"
 		},
 		{
-			"path": "packages/os",
-			"name": "csharp-cli"
-		},
-		{
-			"path": ".",
-			"name": "root-configs"
+			"name": "root-configs",
+			"path": "."
 		}
 	],
 	"settings": {
