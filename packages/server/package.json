@@ -2,6 +2,7 @@
   "name": "rdwyer-ha-client-server",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/app.js"
