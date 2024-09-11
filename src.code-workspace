@@ -6,11 +6,11 @@
 		},
 		{
 			"name": "express-server",
-			"path": "packages/server/src"
+			"path": "packages/server"
 		},
 		{
 			"name": "dashboard-frontend",
-			"path": "packages/web-client/src"
+			"path": "packages/web-client"
 		},
 		{
 			"name": "root-configs",
@@ -19,16 +19,33 @@
 	],
 	"settings": {
 		"files.exclude": {
+			"**/.vs": true,
+			"**/dist": true,
+			"**/build": true,
 			"**/node_modules": true,
 			"**/os.sln": false,
 			"**/bin": true,
 			"**/obj": true,
-			"**/*.csproj": true,
+			"**/*.csproj": false,
 			"package-lock.json": true,
 			"**/.eslintcache": true,
 			"scripts": true,
 			"packages": true,
 		},
 		"files.eol": "\n"
+	},
+	"tasks":{
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Build CLI",
+				"command": "/mnt/c/Users/Ryan-PC/Projects/rdwyer-ha-client/packages/os/build.sh",
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				},
+				"problemMatcher": []
+			}
+		]
 	}
 }

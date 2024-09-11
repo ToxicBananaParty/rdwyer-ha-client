@@ -1,0 +1,1 @@
+cmd.exe /C dotnet build C:/Users/Ryan-PC/Projects/rdwyer-ha-client/packages/os/os.sln /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary /p:Configuration=Release /p:Platform="Any CPU"
