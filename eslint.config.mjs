@@ -6,8 +6,8 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 export default [
     {
-        files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
         ignores: ['**/node_modules', '**/dist', '**/public'],
+        files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
         settings: {
             react: {
                 version: 'detect',
@@ -17,8 +17,8 @@ export default [
     {
         languageOptions: {
             globals: globals.browser,
-            parserOtions: {
-                tsconfigRootDir: __dirname,
+            parserOptions: {
+                tsconfigRootDir: import.meta.dirname,
                 project: ['./packages/*/tsconfig.json'],
             },
         },
