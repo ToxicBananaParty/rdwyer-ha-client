@@ -4,8 +4,16 @@
   "version": "1.0.0",
   "scripts": {
     "prepare": "husky",
-    "build": "tsc --project ./packages/server/tsconfig.json && npm run build --prefix ./packages/web-client",
-    "start": "npm start --prefix ./packages/server & npm start --prefix ./packages/web-client"
+    "build-server": "npm run build --workspace=rdwyer-ha-client-server",
+    "build-webclient": "npm run build --workspace=rdwyer-ha-client-web-client",
+    "build-cli": "cmd.exe /C dotnet build C:/Users/Ryan-PC/Projects/rdwyer-ha-client/packages/os/os.sln /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary /p:Configuration=Release /p:Platform=\"Any CPU\"",
+    "build": "npx run-p build-server build-webclient build-cli",
+    "start-server": "npm start --workspace=rdwyer-ha-client-server",
+    "start-webclient": "npm start --workspace=rdwyer-ha-client-web-client",
+    "start": "npx run-p start-server start-webclient",
+    "dev-server": "npm run dev --workspace=rdwyer-ha-client-server",
+    "dev-webclient": "npm run dev --workspace=rdwyer-ha-client-web-client",
+    "dev": "npx run-p dev-server dev-webclient"
   },
   "repository": {
     "type": "git",
@@ -28,11 +36,14 @@
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
     "tslint-config-prettier": "^1.18.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["eslint --cache --fix --max-warnings 0"]
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix --max-warnings 0"
+    ]
   },
   "dependencies": {
     "eslint": "^8.57.0",

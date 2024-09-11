@@ -5,10 +5,10 @@
   "author": "Ryan Dwyer",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "npm start"
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +36,7 @@
     "@types/node": "^22.5.0",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "react": "^18.3.1",
@@ -46,6 +47,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "create-react-app": "^5.0.1",
     "ts-node": "^10.9.2"
   }
