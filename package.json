@@ -5,15 +5,15 @@
   "scripts": {
     "prepare": "husky",
     "build-server": "npm run build --workspace=rdwyer-ha-client-server",
-    "build-webclient": "npm run build --workspace=rdwyer-ha-client-web-client",
+    "build-dashboard": "npm run build --workspace=rdwyer-ha-client-web-dashboard",
     "build-cli": "cmd.exe /C dotnet build C:/Users/Ryan-PC/Projects/rdwyer-ha-client/packages/os/os.sln /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary /p:Configuration=Release /p:Platform=\"Any CPU\"",
-    "build": "npx run-p build-server build-webclient build-cli",
+    "build": "npx run-p build-server build-dashboard build-cli",
     "start-server": "npm start --workspace=rdwyer-ha-client-server",
-    "start-webclient": "npm start --workspace=rdwyer-ha-client-web-client",
-    "start": "npx run-p start-server start-webclient",
+    "start-dashboard": "npm start --workspace=rdwyer-ha-client-web-dashboard",
+    "start": "npx run-p start-server start-dashboard",
     "dev-server": "npm run dev --workspace=rdwyer-ha-client-server",
-    "dev-webclient": "npm run dev --workspace=rdwyer-ha-client-web-client",
-    "dev": "npx run-p dev-server dev-webclient"
+    "dev-dashboard": "npm run dev --workspace=rdwyer-ha-client-web-dashboard",
+    "dev": "npx run-p dev-server dev-dashboard"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   "description": "",
   "workspaces": [
     "packages/server",
-    "packages/web-client"
+    "packages/web-dashboard"
   ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.62.0",
@@ -38,6 +38,7 @@
     "lint-staged": "^15.2.9",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
+    "sass": "^1.78.0",
     "tslint-config-prettier": "^1.18.0"
   },
   "lint-staged": {

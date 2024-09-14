@@ -9,11 +9,11 @@
 			"path": "packages/server"
 		},
 		{
-			"name": "dashboard-frontend",
-			"path": "packages/web-client"
+			"name": "react-dashboard",
+			"path": "packages/web-dashboard"
 		},
 		{
-			"name": "root-configs",
+			"name": "workspace-configs",
 			"path": "."
 		}
 	],
