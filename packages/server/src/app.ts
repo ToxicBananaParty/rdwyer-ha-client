@@ -41,12 +41,17 @@ app.post('/displayMode', (req, res) => {
     const numMonitors = getNumMonitors();
     if (numMonitors === 2) {
         // Currently in Couch Mode -> Switch to One Monitor
+        // TODO: Kill steam if it is in big picture mode? How to get steam state?
         res.send({ displayMode: 1 });
         execSync('cmd.exe /C "displayswitch.exe /internal"');
     } else if (numMonitors === 1) {
         // Currently in Office Mode -> Switch to Two Monitors
         res.send({ displayMode: 2 });
         execSync('cmd.exe /C "displayswitch.exe /extend"');
+        //TODO: Only do this part if req says I should
+        setTimeout(() => {
+            execSync('cmd.exe /C "start steam://open/bigpicture"');
+        }, 5000);
     }
 });
 

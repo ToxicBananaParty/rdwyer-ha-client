@@ -37,6 +37,8 @@ function App() {
         else if (res.data.displayMode === 1) setDisplayMode('"Office"');
     };
 
+    //TODO: Toggle Box "Start Steam when switching to Couch Mode"
+
     return (
         <Container className="align-items-center">
             <h1>Display Mode is Currently {displayMode}</h1>
