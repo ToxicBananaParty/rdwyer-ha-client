@@ -8,10 +8,10 @@
     "build-dashboard": "npm run build --workspace=rdwyer-ha-client-web-dashboard",
     "build-cli": "cmd.exe /C dotnet build C:/Users/Ryan-PC/Projects/rdwyer-ha-client/packages/os/os.sln /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary /p:Configuration=Release /p:Platform=\"Any CPU\"",
     "build": "npx run-p build-server build-dashboard build-cli",
-    "start-server": "npm start --workspace=rdwyer-ha-client-server",
+    "start-server": "npm run build --workspace=rdwyer-ha-client-server && npm start --workspace=rdwyer-ha-client-server",
     "start-dashboard": "npm start --workspace=rdwyer-ha-client-web-dashboard",
     "start": "npx run-p start-server start-dashboard",
-    "dev-server": "npm run dev --workspace=rdwyer-ha-client-server",
+    "dev-server": "npm run start-server",
     "dev-dashboard": "npm run dev --workspace=rdwyer-ha-client-web-dashboard",
     "dev": "npx run-p dev-server dev-dashboard"
   },
