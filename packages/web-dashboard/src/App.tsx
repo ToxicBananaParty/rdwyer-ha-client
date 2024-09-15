@@ -13,7 +13,7 @@ function App() {
     useEffect(() => {
         async function fetchDisplayMode() {
             const res = await axios.get(
-                'http://192.168.0.240:6969/displayMode'
+                'http://192.168.0.240:6969/display/mode'
             );
 
             if (!ignore && res.data.displayMode === 2)
@@ -30,7 +30,7 @@ function App() {
     }, []);
 
     const toggleDisplayMode = async () => {
-        const res = await axios.post('http://192.168.0.240:6969/displayMode');
+        const res = await axios.post('http://192.168.0.240:6969/display/mode');
 
         //console.log(JSON.stringify(res.data, null, 2));
         if (res.data.displayMode === 2) setDisplayMode('"Couch"');
